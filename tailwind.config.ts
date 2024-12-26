@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: "var(--font-noto-sans-kr)", // 기본 sans-serif를 Noto Sans KR로 설정
+      },
     },
   },
   plugins: [],
