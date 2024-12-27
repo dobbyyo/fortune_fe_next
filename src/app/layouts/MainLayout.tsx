@@ -1,25 +1,14 @@
-"use client";
-
 import React, { ReactNode } from "react";
-import {
-  AuthHeader,
-  Footer,
-  MainContent,
-  NoAuthHeader,
-} from "@app/components/common";
-import { useRecoilValue } from "recoil";
-import { isAuthenticatedState } from "@/atoms/authState";
+import { Header, Footer, MainContent } from "@app/components/common";
 
 interface MainLayoutProps {
   children: ReactNode;
 }
 
 const MainLayout = ({ children }: MainLayoutProps) => {
-  const isAuthenticated = useRecoilValue(isAuthenticatedState);
-
   return (
     <div className="min-h-screen flex flex-col">
-      {isAuthenticated ? <AuthHeader /> : <NoAuthHeader />}
+      <Header />
       <MainContent>{children}</MainContent>
       <Footer />
     </div>

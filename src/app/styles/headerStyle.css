@@ -1,0 +1,5 @@
+.header-btn {
+  @apply w-[100px] h-[50px] sm:w-[120px] sm:h-[60px] bg-[#A57AF1] 
+           hover:bg-[#8c66d9] font-bold text-white rounded-md 
+           shadow-lg transition-all duration-200 text-[14px] sm:text-[16px];
+}
