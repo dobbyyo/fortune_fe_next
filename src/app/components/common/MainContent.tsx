@@ -5,7 +5,11 @@ interface MainContentProps {
 }
 
 const MainContent = ({ children }: MainContentProps) => {
-  return <main className="flex-1 p-6 bg-gray-100">{children}</main>;
+  return (
+    <main className="flex-1 w-full max-w-[1200px] min-w-[320px] mx-auto px-4 py-2">
+      {children}
+    </main>
+  );
 };
 
 export default MainContent;

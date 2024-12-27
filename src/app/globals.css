@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "./styles/headerStyle.css";
+@import "./styles/commonStyle.css";
 
 :root {
   --background: #ffffff;

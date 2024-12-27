@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ResponsiveImageProps {
   webpSrc: string;
   pngSrc: string;
@@ -16,12 +18,14 @@ const ResponsiveImage = ({
   return (
     <picture>
       <source srcSet={webpSrc} type="image/webp" />
-      <img
+      <Image
         src={pngSrc}
         alt={alt}
+        layout="fill"
+        objectFit="contain"
         className={className}
-        loading="lazy"
         onClick={handleClick}
+        loading="lazy"
       />
     </picture>
   );

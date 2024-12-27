@@ -7,21 +7,20 @@ const LeftHeader = () => {
     <div className="flex-1 flex items-center">
       <div className="avatar">
         <div
-          className="w-[50px] h-[50px] sm:w-[40px] sm:h-[40px] 
+          className="relative w-[50px] h-[50px] sm:w-[40px] sm:h-[40px] 
                      md:w-[100px] md:h-[100px] rounded-xl bg-[#DECEFF]"
         >
           <ResponsiveImage
             webpSrc="/header/webp/login-logo.webp"
             pngSrc="/header/png/login-logo.png"
             alt="Avatar"
-            className="cursor-pointer w-full h-full object-cover"
           />
         </div>
       </div>
       <Link
         href={"/"}
         className="flex ml-3 font-bold cursor-pointer
-        sm:text-[20px]
+        sm:text-[30px]
       "
       >
         너의 이름은
