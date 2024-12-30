@@ -4,10 +4,10 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { checkAuth } from "@/services/authService";
-import HomePageContent from "./(pages)/(home)/HomePageContent";
+import TarotPageContent from "@app/(pages)/tarot/TarotPageContent";
 import { ApiResponse } from "@/types/api";
 
-export const HomePage = async () => {
+export const Tarot = async () => {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery<ApiResponse<null>>({
@@ -24,9 +24,9 @@ export const HomePage = async () => {
 
   return (
     <HydrationBoundary state={dehydratedState}>
-      <HomePageContent authData={authData} />
+      <TarotPageContent authData={authData} />
     </HydrationBoundary>
   );
 };
 
-export default HomePage;
+export default Tarot;

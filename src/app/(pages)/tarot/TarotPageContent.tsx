@@ -1,28 +1,27 @@
 "use client";
 
-import { CategoryList, SearchBar } from "@/app/components/home";
+import { BaseNavBar } from "@/app/components/bar";
 import { authState } from "@/atoms/authState";
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 
-interface HomePageContentProps {
+interface TarotPageContentProps {
   authData: { status: number; message: string; data: null };
 }
 
-export const HomePageContent = ({ authData }: HomePageContentProps) => {
+export const TarotPageContent = ({ authData }: TarotPageContentProps) => {
   const setAuth = useSetRecoilState(authState);
 
-  // 리코일 상태 업데이트
   useEffect(() => {
     setAuth(authData.status === 200 ? true : false);
   }, [authData, setAuth]);
 
   return (
     <div className="baseWrapper">
-      <SearchBar />
-      <CategoryList />
+      <BaseNavBar title={"타로"} />
+      <div></div>
     </div>
   );
 };
 
-export default HomePageContent;
+export default TarotPageContent;

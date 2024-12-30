@@ -19,9 +19,7 @@ const LeftHeader = () => {
       </div>
       <Link
         href={"/"}
-        className="flex ml-3 font-bold cursor-pointer
-        sm:text-[30px]
-      "
+        className="flex ml-3 font-bold cursor-pointer sm:text-[30px]"
       >
         너의 이름은
       </Link>
