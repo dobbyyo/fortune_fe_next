@@ -3,6 +3,8 @@ import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import MainLayout from "./layouts/MainLayout";
 import ClientProviders from "./provider/ClientProviders";
+import "swiper/css";
+import "swiper/css/pagination";
 
 // Noto Sans KR 설정
 const notoSansKR = Noto_Sans_KR({

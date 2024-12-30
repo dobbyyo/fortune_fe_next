@@ -1,9 +1,16 @@
 "use client";
 
 import { BaseNavBar } from "@/app/components/bar";
+import { Line } from "@/app/components/common";
 import { authState } from "@/atoms/authState";
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
+import TarotMain from "./TarotMain";
+import TarotCardTitle from "./TarotCardTitle";
+import TarotCardSlider from "./TarotCardSlider";
+import TarotSelectedCard from "./TarotSelectedCard";
+import TarotActionButton from "./TarotActionButton";
+import TarotTabNavigation from "./TarotTabNavigation";
 
 interface TarotPageContentProps {
   authData: { status: number; message: string; data: null };
@@ -19,7 +26,14 @@ export const TarotPageContent = ({ authData }: TarotPageContentProps) => {
   return (
     <div className="baseWrapper">
       <BaseNavBar title={"타로"} />
-      <div></div>
+      <Line />
+      <TarotTabNavigation />
+      <TarotMain>
+        <TarotCardTitle />
+        <TarotCardSlider />
+        <TarotSelectedCard />
+        <TarotActionButton />
+      </TarotMain>
     </div>
   );
 };

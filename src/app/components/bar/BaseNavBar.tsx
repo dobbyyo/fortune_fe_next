@@ -38,7 +38,7 @@ const BaseNavBar = ({ title }: NavBarProps) => {
 
   return (
     <>
-      <div className="navbar w-full flex items-center relative h-[100px]">
+      <div className="navbar w-full flex items-center relative h-[40px] sm:h-[100px]">
         <div className="navbar-start absolute left-4">
           <div className="dropdown relative">
             <button
@@ -85,7 +85,7 @@ const BaseNavBar = ({ title }: NavBarProps) => {
           </div>
         </div>
         <div className="navbar-center mx-auto">
-          <h2 className="text-[15px] sm:text-[30px] font-bold">{title}</h2>
+          <h2 className="text-[20px] sm:text-[30px] font-bold">{title}</h2>
         </div>
       </div>
     </>
